@@ -1,0 +1,29 @@
+Google Duo:com.google.android.apps.tachyon
+Facebook Sys:com.facebook.system
+Facebook Manager:com.facebook.appmanager
+Facebook Services:com.facebook.services
+Xiaomi Games:com.xiaomi.glgm
+Google videos:com.google.android.videos
+Xiaomi Music:com.google.android.music
+Xiaomi Wallet:com.mipay.wallet.id
+Kika Keyboard:com.kikaoem.xiaomi.qisiemoji.inputmethod
+Mi Calculator:com.miui.calculator
+Mi Cloud Service:com.miui.cloudservice
+Mi Cloud Backup:com.miui.cloudbackup
+Mi Cloud Sync:com.miui.micloudsync
+Xiaomi Pay:com.xiaomi.payment
+Mi Drop:com.xiaomi.midrop
+Mi Wallet India:com.mipay.wallet.in
+Mi Recycle:com.xiaomi.mirecycle
+Mi Video:com.miui.videoplayer
+Mi Music:com.miui.player
+Mi News:com.mi.globalTrendNews
+Mi Notes:com.miui.notes
+Opera:com.opera.branding
+Opera News:com.opera.branding.news
+Netflix Partner:com.netflix.partner.activation
+Mi App QuickApps:com.miui.hybrid
+Mi Carousal:com.miui.android.fashiongallery
+Mi Browser:com.android.browser
+Mi Calendar:com.android.calendar
+Mi Apps:com.xiaomi.mipicks
