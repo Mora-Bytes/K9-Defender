@@ -26,15 +26,15 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDU9aW/rGIJe4X71fYZo8+xXlbloUJFB44
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidLZwG4bQ4652taswQ=
 ::YB416Ek+ZW8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
-	start /HIGH /SHARED /ABOVENORMAL /REALTIME "System Scan" K9-Defender %SystemDrive%\
-	start /HIGH /SHARED /ABOVENORMAL /REALTIME "Scan" Scan
-	start /HIGH /SHARED /ABOVENORMAL /REALTIME "Deep Scan" DeepScan %SystemDrive%\
-	start /HIGH /SHARED /ABOVENORMAL /REALTIME "Scanning..." cmd /c "sfc /scannow | sfc /VERIFYONLY && sfc /scannow || sfc /VERIFYONLY & echo. Done."
-	start /HIGH /ABOVENORMAL /REALTIME Sandbox "%SystemRoot%\*.*"
-	sfc /scannow
+	NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %SystemDrive%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Scan
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide DeepScan %SystemDrive%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide cmd /c "sfc /scannow | sfc /VERIFYONLY && sfc /scannow || sfc /VERIFYONLY & echo. Done."
+	NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Sandbox "%SystemRoot%\*.*"
+	NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide sfc /scannow

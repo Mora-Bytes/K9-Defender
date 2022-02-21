@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDU9aW/rGIJe4X71fYR5Ms2k5Tlc48HhRMexG/ZwA652taswQ=
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidqexOnWgY5rF5QuXCANNOVvAGvT1CMhg==
 ::YB416Ek+ZW8=
 ::
 ::
@@ -34,7 +34,7 @@
 ::K91408815
 @echo off
 Title K9-Defender Security
-ATTRIB /S /D %~nx0 +r +a +s +h +o +i +x +p +u
+ATTRIB /S /D %~nx0 +s +h
 for %%A in (
 "%~dp0db.txt"
 "%~dp0gethex.exe"

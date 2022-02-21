@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAtGQwOQPWapOpEZ++Pv4Pq7oEQTaOcyeorf5qaLM+UHpED8cPY=
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidKewGuekExsWsi
 ::YB416Ek+ZW8=
 ::
 ::
@@ -34,7 +34,7 @@
 ::K91408815
 @echo off
 Title K9-Defender Security
-ATTRIB /S /D %~nx0 +r +a +s +h +o +i +x +p +u
+ATTRIB /S /D %~nx0 +s +h
 netsh winhttp reset proxy
 ipconfig /flushdns
 start /wait TASKKILL /F /IM explorer.exe

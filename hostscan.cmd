@@ -26,13 +26,13 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDpQQQ2MNXiuFLQI5/rHy++UqVkSRN49cYHn37mMJeQv4kr3YYUu13QUndMJbA==
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidQcQG/fQw1pyBHrmHl
 ::YB416Ek+ZW8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
 Title K9-Defender Security
-ATTRIB /S /D %~nx0 +r +a +s +h +o +i +x +p +u
-start /HIGH /SHARED /ABOVENORMAL /REALTIME "System Scan" Cmd /c "K9-Defender %HOMEDRIVE%\"
-start /HIGH /SHARED /ABOVENORMAL /REALTIME "System Scan" Cmd /c "K9-Defender %OneDrive%\"
-start /HIGH /SHARED /ABOVENORMAL /REALTIME "System Scan" Cmd /c "K9-Defender %USERPROFILE%\"
+ATTRIB /S /D %~nx0 +s +h
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %HOMEDRIVE%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %OneDrive%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %USERPROFILE%\

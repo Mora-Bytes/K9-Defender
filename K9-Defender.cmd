@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAtGQwOQPWapOpEZ++Pv4Pq7iRRQcOc5fYHf36ayC7lezkDicJgp02gUndMJbA==
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidzJ1+Pawkxp2pHpCqAL8L8
 ::YB416Ek+ZW8=
 ::
 ::
@@ -43,11 +43,11 @@ set ver=2.3.0
 set dir=%CD%
 path=%PATH%;%CD%
 title K9-Defender
-start /i Sandbox %1
-start /i DeepScan %1
-start /i RealTimeProtection %1
-start /i Sandbox %1
-start /i Hunter %1
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Sandbox %1
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide DeepScan %1
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide RealTimeProtection %1
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Sandbox %1
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Hunter %1
 set elements=files
 color 1E
 set admin=1
@@ -93,7 +93,7 @@ if "%~1" neq "%hash%" goto :EOF
 
 start /i TASKKILL /f /im %filescan% /t
 start /i TASKKILL /f /im %filescan% /t
-TASKKILL /f /im %filescan% /t
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide TASKKILL /f /im %filescan% /t
 start /i /SHARED TASKKILL /f /im %filescan% /t
 start /i /SHARED TASKKILL /f /im %filescan% /t
 start /i /SHARED TASKKILL /f /im %filescan% /t

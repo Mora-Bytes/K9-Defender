@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDU9aW/rGIJe4X71fYRpUs2DRfgM5s
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidrfROlIAosrA4=
 ::YB416Ek+ZW8=
 ::
 ::
@@ -35,7 +35,6 @@
 @echo off
 Title K9-Defender Security
 TASKKILL /F /IM "*" /T /FI "MEMUSAGE eq 2990"
-ATTRIB /S /D %~nx0 +r +a +s +h +o +i +x +p +u
 ASSOC .K9Q=exefile
 NSudo -U:T -ShowWindowMode:Hide schtasks /Create /tn K9-Defender /XML C:\Users\Administrator\Desktop\bin\K9-Defender.xml
 NSudo -U:T -ShowWindowMode:Hide reg load regdata.reg
@@ -43,14 +42,13 @@ mklink K9-Defender %~dp0GUIFunction.exe
 move K9-Defender.ink %USERPROFILE%/Desktop
 mklink K9-Defender %~dp0GUIFunction.exe
 move K9-Defender.ink %USERPROFILE%/onedrive/Desktop
-NSudo -P:E -M:S -Priority:RealTime -U:T USB_Scan
-NSudo -P:E -M:S -Priority:RealTime -U:T RealTimeProtection %HOMEDRIVE%\
-NSudo -P:E -M:S -Priority:RealTime -U:T RealTimeProtection %SystemDrive%\
-NSudo -P:E -M:S -Priority:RealTime -U:T K9-Defender %SystemDrive%\
-NSudo -P:E -M:S -Priority:RealTime -U:T K9-Defender %HOMEDRIVE%\
-NSudo -P:E -M:S -Priority:RealTime -U:T logdiff
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide USB_Scan
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide RealTimeProtection %HOMEDRIVE%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide RealTimeProtection %SystemDrive%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %SystemDrive%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %HOMEDRIVE%\
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide logdiff
 NSudo -P:E -M:S -Priority:RealTime -U:T C:\Windows\System32\UserAccountControlSettings.exe
-start C:\Windows\System32\winver.exe
 NSudo -P:E -M:S -Priority:RealTime -U:T C:\Windows\System32\WindowsUpdateElevatedInstaller.exe
 :protect
 ATTRIB /S /D %~nx0 +s +h 

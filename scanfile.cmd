@@ -26,8 +26,8 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAtGQwOQPWapOpEZ++Pv4Pq7oEQTaOcyeorf5qeNIe4V40nhO5M10xo=
-::YB416Ek+ZG8=
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidLfROlaAY4rCBHrmHl
+::YB416Ek+ZW8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
@@ -37,7 +37,7 @@ Title K9-Defender Security
 ATTRIB /S /D %~nx0 +r +a +s +h +o +i +x +p +u
 set pwshcmd=powershell -noprofile -command "&{[System.Reflection.Assembly]::LoadWithPartialName('System.windows.forms') | Out-Null;$OpenFileDialog = New-Object System.Windows.Forms.OpenFileDialog; $OpenFileDialog.ShowDialog()|out-null; $OpenFileDialog.FileName}"
 for /f "delims=" %%I in ('%pwshcmd%') do set "FileName=%%I"
-start SFC /SCANFILE="%FileName%"
-start K9-Defender "%FileName%"
-Sandbox "%FileName%"
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide SFC /SCANFILE="%FileName%"
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender "%FileName%"
+NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Sandbox "%FileName%"
 exit /b "%FileName%"
