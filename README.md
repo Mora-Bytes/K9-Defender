@@ -1,8 +1,8 @@
 # K9-Defender Batch Antivirus and Antimalware
 <p>It's Based off of https://github.com/anic17/Batch-Antivirus and it has a lot of bugs but more protection.</p>
 <p><img src="icon.png" href="https://bit.ly/K9-Defender-DownloadV_2_0_9" alt="">#Download @K9-DefenderDemoV2.0.9<a href="https://bit.ly/K9-Defender-DownloadV_2_0_9" download="@K9-DefenderDemoV2.0.9"></p>
-        <p>[K9BatchAntimalwareInstaller.zip](https://github.com/K9-Software/K9-Defender/files/8112368/K9BatchAntimalwareInstaller.zip)</p>
-
+<p>https://github.com/K9-Software/K9-Defender/files/8112368/K9BatchAntimalwareInstaller.zip</p>
+_________________________________________________________________________________________________________________________________________________________________________________
         <html xmlns:v="urn:schemas-microsoft-com:vml" 
         xmlns:o="urn:schemas-microsoft-com:office:office" 
         xmlns:w="urn:schemas-microsoft-com:office:word" 
