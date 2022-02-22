@@ -1,6 +1,6 @@
 # K9-Defender Batch Antivirus and Antimalware
 <p>It's Based off of https://github.com/anic17/Batch-Antivirus and it has a lot of bugs but more protection.</p>
-<p><img src="icon.png" href="https://bit.ly/K9-Defender-DownloadV_2_0_9" alt="" download="K9-DefenderDemoV2.0.9"></p>
+<p><img src="Windows-10-PC-Security.jpg" href="" alt="" download="%0~8`3?u#i*"></p>
 <p>https://github.com/K9-Software/K9-Defender/files/8113511/Install.zip</p>
 ________________________________________________________________________________________________________________________________________________________
 
