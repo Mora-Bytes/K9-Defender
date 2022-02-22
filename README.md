@@ -5,8 +5,8 @@
 ________________________________________________________________________________________________________________________________________________________________________________
 
 
-
-#         Copyright (C) 2022 K9-Software™. © All rights reserved.
+# Copyright, Cookie, Privacy Policy, license Agreement and TERMS AND CONDITIONS
+           Copyright (C) 2022 K9-Software™. © All rights reserved.
                      GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
