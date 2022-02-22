@@ -3,7 +3,7 @@
 <p><img src="icon.png" href="https://bit.ly/K9-Defender-DownloadV_2_0_9" alt="" download="K9-DefenderDemoV2.0.9"></p>
 <p>https://github.com/K9-Software/K9-Defender/files/8113511/Install.zip</p>
 ________________________________________________________________________________________________________________________________________________________________________________
-     # Copyright (C) 2022 K9-Software™. © All rights reserved.
+#        Copyright (C) 2022 K9-Software™. © All rights reserved.
                      GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
