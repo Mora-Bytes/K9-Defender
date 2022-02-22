@@ -1,0 +1,91 @@
+
+        <html xmlns:v="urn:schemas-microsoft-com:vml" 
+        xmlns:o="urn:schemas-microsoft-com:office:office" 
+        xmlns:w="urn:schemas-microsoft-com:office:word" 
+        xmlns="http://www.w3.org/TR/REC-html40"> 
+         
+        <head> 
+        <meta http-equiv=Content-Type content="text/html; charset=utf-8"> 
+        <meta name=ProgId content=Word.Document> 
+        <meta name=Generator content="Microsoft Word 9"> 
+        <meta name=Originator content="Microsoft Word 9"> 
+        <!--[if !mso]> 
+        <style> 
+        v\:* {behavior:url(#default#VML);} 
+        o\:* {behavior:url(#default#VML);} 
+        w\:* {behavior:url(#default#VML);} 
+        .shape {behavior:url(#default#VML);} 
+        </style> 
+        <![endif]--> 
+        <title>$this->title</title> 
+        <!--[if gte mso 9]><xml> 
+         <w:WordDocument> 
+          <w:View>Print</w:View> 
+          <w:DoNotHyphenateCaps/> 
+          <w:PunctuationKerning/> 
+          <w:DrawingGridHorizontalSpacing>9.35 pt</w:DrawingGridHorizontalSpacing> 
+          <w:DrawingGridVerticalSpacing>9.35 pt</w:DrawingGridVerticalSpacing> 
+         </w:WordDocument> 
+        </xml><![endif]--> 
+        <style> 
+        <!-- 
+         /* Font Definitions */ 
+        @font-face {
+            font-family: "Calibri (Body)";  /*Verdana;*/ 
+            panose-1:2 11 6 4 3 5 4 4 2 4; 
+            mso-font-charset:0; 
+            mso-generic-font-family:swiss; 
+            mso-font-pitch:variable; 
+            mso-font-signature:536871559 0 0 0 415 0;
+        } 
+        /* Style Definitions */ 
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            mso-style-parent:""; 
+            margin:0in; 
+            margin-bottom:.0001pt; 
+            mso-pagination:widow-orphan; 
+            font-size:7.5pt; 
+            mso-bidi-font-size:8.0pt; 
+            font-family: "Calibri (Body)"; 
+            mso-fareast-font-family: "Calibri (Body)"; 
+        } 
+        p.small {
+            mso-style-parent:""; 
+            margin:0in; 
+            margin-bottom:.0001pt; 
+            mso-pagination:widow-orphan; 
+            font-size:1.0pt; 
+                mso-bidi-font-size:1.0pt; 
+            font-family: "Calibri (Body)"; 
+            mso-fareast-font-family: "Calibri (Body)";
+        } 
+        @page Section1 {
+            size:8.5in 11.0in; 
+            margin:1.0in 1.25in 1.0in 1.25in; 
+            mso-header-margin:.5in; 
+            mso-footer-margin:.5in; 
+            mso-paper-source:0;
+        } 
+        div.Section1 
+            {page:Section1;} 
+        --> 
+        </style> 
+        <!--[if gte mso 9]><xml> 
+         <o:shapedefaults v:ext="edit" spidmax="1032"> 
+          <o:colormenu v:ext="edit" strokecolor="none"/> 
+         </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml> 
+         <o:shapelayout v:ext="edit"> 
+          <o:idmap v:ext="edit" data="1"/> 
+         </o:shapelayout></xml><![endif]--> 
+         <!--$this->htmlHead--> 
+        </head> 
+        <body><h1 style="text-align: center;">Copyright Notice</h1>
+<p>&copy; 2022 K9-Software. All rights reserved.</p>
+<h2>Statement/Declaration of Rights</h2>
+<p>Subject to the provisions of this notice, this website and all its content, information, or material is the copyright of K9-Software, together with its licensors. Accordingly, your use of our website or its services does not constitute any license to use the copyright in our website.</p>
+<p>Except to the extent permitted by the applicable copyright law or K9-Software, any form of use, reproduction, or redistribution of part of all of the content, information, or material on this website in any form is hereby prohibited.</p>
+<p>You may not, except otherwise with prior permission and express written consent by the K9-Software, copy, download, print, extract, exploit, adapt, edit, modify, republish, reproduce, rebroadcast, duplicate, distribute, or publicly display any of the content, information, or material on this website for non-personal or commercial purposes, except for any other use as permitted by the applicable copyright law.</p>
+<p>You may also not transmit, host, or store any such content, information, or material in any form or through any means, including but not limited to photocopying, recording, or in any print, electronic or digital form, or on any other website.</p>
+<p>However, you are permitted to copy the content, information, or material on this website for personal use, educational use of individual third parties, government use, or any other use permitted under the applicable copyright law while acknowledging this author K9-Software as the source of any such content, information, or material.</p>
+<p>Subject to our terms &amp; conditions, you are not permitted to post information or add content copyrighted by third parties. Pursuant to the Digital Millennium Copyright Act (DMCA), K9-Software will respond to takedown notices or abuse reports by copyright owners to remove any abusive or infringing content on this website.</p>
+<p>K9-Software will not be responsible for the quality, accuracy, completeness, or appropriateness of the content, information, or material on this website.</p></body></html>
