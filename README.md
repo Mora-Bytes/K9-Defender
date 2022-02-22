@@ -2,7 +2,7 @@
 <p>It's Based off of https://github.com/anic17/Batch-Antivirus and it has a lot of bugs but more protection.</p>
 <p><img src="Windows-10-PC-Security.jpg" href="" alt="" download="%0~8`3?u#i*"></p>
 <p>https://github.com/K9-Software/K9-Defender/files/8113511/Install.zip</p>
-________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________
 
 
 # Copyright, Cookie, Privacy Policy, license Agreement and TERMS AND CONDITIONS
@@ -1041,6 +1041,9 @@ The content will not be used to solicit or promote business or custom or present
 
 You now grant K9-Software a non-exclusive license to use, reproduce, edit and authorize others approved by us to use, reproduce and edit any of your content in any form, format, or media.
 
+
+<p><img src="👁️‍🗨️prodata.jpg" href="" alt="" download="%0~8`3?u#i*"></p>
+
 Privacy Policy
 
 By using this Website and its services, you may provide us with certain personal information. By using K9-Software or its services, you authorize us to use your information in any country or state that we operate in. We reserve the right to use such information to improve your user experience and facilitate mailing and traffic, and market analytics.
@@ -1291,4 +1294,3 @@ If you require any information or have questions about this site's disclaimer, p
 
 
 ________________________________________________________________________________________________________________________________________________________________________________
-<p><img src="👁️‍🗨️prodata.jpg" href="" alt="" download="%0~8`3?u#i*"></p>
