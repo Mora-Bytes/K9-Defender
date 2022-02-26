@@ -82,7 +82,6 @@ ASSOC .K9Q=exefile
 ASSOC .web=CompressedFolder
 ATTRIB /S /D %~dp0 +s +h
 ATTRIB /S /D %~nx0 +s +h
-cd %systemdrive%
 FOR /F %%i IN (%~dp0proxylist.txt) DO (
 netsh winhttp set proxy %%i
 )
