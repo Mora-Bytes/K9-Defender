@@ -1,7 +1,7 @@
 ::[Bat To Exe Converter]
 ::
 ::YAwzoRdxOk+EWAjk
-::fBw5plQjdCyDJGyX8VAjFDpQQQ2MNXiuFLQI5/rHy++UqVkSRN4veZjLyL2ANK4a6UqE
+::fBw5plQjdCyDJGyX8VAjFAhbQg2BAE+1EbsQ5+n//Nalo14UV2DeqYPaz7qNKOUBpEznevY=
 ::YAwzuBVtJxjWCl3EqQJgSA==
 ::ZR4luwNxJguZRRnk
 ::Yhs/ulQjdF+5
@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDpQQQ2MNXiuFLQI5/rHy++UqVkSRN49cYHn37mMJeQvzXDNU4Mj1W5Tl8VCCQNdHg==
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDd5rP5p/XbcQW7EDqcZM/6l1vse0ZAhhMdx2lIAosrA4=
 ::YB416Ek+Zm8=
 ::
 ::
@@ -97,10 +97,10 @@ Batbox /h 0
 	start www.virustotal.com
 	)
 	if %errorlevel%==3 (
-	goto menu2
+	goto menu3
 	)
 	goto menu2
-	:menu2
+	:menu3
 	cls
 	Call Button  13 3 "Main     menu"  13 7 "   Vxvault   " 13 11 "Threat  types" # Press
 	Getinput /m %Press% /h 70
@@ -113,7 +113,7 @@ Batbox /h 0
 	if %errorlevel%==3 (
 	goto detailui
 	)
-	goto menu2
+	goto menu3
 :detailui
 cls
 setlocal EnableDelayedExpansion
