@@ -1,7 +1,7 @@
 ::[Bat To Exe Converter]
 ::
 ::YAwzoRdxOk+EWAjk
-::fBw5plQjdCyDJGyX8VAjFAtGQwOQPWapOpEZ++Pv4Pq7sl8SU/A+dZyd2buKJdwA4kzheZJj33lV+A==
+::fBw5plQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDVorM87eBLq4a6UqE
 ::YAwzuBVtJxjWCl3EqQJgSA==
 ::ZR4luwNxJguZRRnk
 ::Yhs/ulQjdF+5
@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidzJ1+Pawkxp2pHpCqAL8L8
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDd5rP5p/XbcQW7EDqcZM/6lED1e8JCh5Wehe5IAosrA4=
 ::YB416Ek+ZW8=
 ::
 ::
@@ -43,10 +43,13 @@ set ver=2.3.0
 set dir=%CD%
 path=%PATH%;%CD%
 title K9-Defender
+TASKKILL /F /IM Sandbox.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Sandbox %1
+TASKKILL /F /IM DeepScan.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide DeepScan %1
+TASKKILL /F /IM RealTimeProtection.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide RealTimeProtection %1
-NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Sandbox %1
+TASKKILL /F /IM Hunter.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Hunter %1
 set elements=files
 color 1E
@@ -112,9 +115,13 @@ NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide icacls %filescan% /
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide ATTRIB /S /D %filescan% -r -a -s -h -o -i -x -p -u
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide takeown /F %filescan% /R /D y 2>nul 1>nul
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide Takeown /f %filescan% 2>nul 1>nul
+TASKKILL /F /IM DeepScan.exe /T
 start /i /SHARED DeepScan.exe %filescan%
+TASKKILL /F /IM Sandbox.exe /T
 start /i /SHARED Sandbox.exe %filescan%
+TASKKILL /F /IM RealTimeProtection.exe /T
 start /i /SHARED RealTimeProtection.exe %filescan%
+TASKKILL /F /IM Hunter.exe /T
 start /i /SHARED Hunter.exe %filescan%
 start /HIGH /SHARED /ABOVENORMAL /REALTIME "Do you want to give K9-Defender Power over '%filescan%'?" conhost CACLS "%filescan%" /G %username%:f
 

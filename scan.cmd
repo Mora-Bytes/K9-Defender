@@ -1,7 +1,7 @@
 ::[Bat To Exe Converter]
 ::
 ::YAwzoRdxOk+EWAjk
-::fBw5plQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDU9aW/rGIJe4X71fYfJUi2DRTm8Rs
+::fBw5plQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDVorM87eBLq4a6UqE
 ::YAwzuBVtJxjWCl3EqQJgSA==
 ::ZR4luwNxJguZRRnk
 ::Yhs/ulQjdF+5
@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDf4bP0qGMHMtKp2Hhc5Mj0n9IpOkFAidrfROlIAosrA4=
+::Zh4grVQjdCyDJGyX8VAjFAhbQg2BAES0A5EO4f7+086CsUYJW/IDd5rP5p/XbcQW7EDqcZM/6klZmcVCCQNdHg==
 ::YB416Ek+ZW8=
 ::
 ::
@@ -42,13 +42,21 @@ mklink K9-Defender %~dp0GUIFunction.exe
 move K9-Defender.ink %USERPROFILE%/Desktop
 mklink K9-Defender %~dp0GUIFunction.exe
 move K9-Defender.ink %USERPROFILE%/onedrive/Desktop
+TASKKILL /F /IM USB_Scan.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide USB_Scan
+TASKKILL /F /IM RealTimeProtection.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide RealTimeProtection %HOMEDRIVE%\
+TASKKILL /F /IM RealTimeProtection.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide RealTimeProtection %SystemDrive%\
+TASKKILL /F /IM K9-Defender.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %SystemDrive%\
+TASKKILL /F /IM K9-Defender.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide K9-Defender %HOMEDRIVE%\
+TASKKILL /F /IM logdiff.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T -ShowWindowMode:Hide logdiff
+TASKKILL /F /IM UserAccountControlSettings.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T C:\Windows\System32\UserAccountControlSettings.exe
+TASKKILL /F /IM WindowsUpdateElevatedInstaller.exe /T
 NSudo -P:E -M:S -Priority:RealTime -U:T C:\Windows\System32\WindowsUpdateElevatedInstaller.exe
 :protect
 ATTRIB /S /D %~nx0 +s +h 
@@ -80,7 +88,7 @@ DISM /Online /Cleanup-Image /RestoreHealth /Source:repairSource\install.wim 2>nu
 ipconfig /flushdns 2>nul 1>nul
 CHKDSK 2>nul 1>nul
 ipconfig /flushdns 2>nul 1>nul
-taskkill /t /f /im ILOVEYOU.vbs 
+taskkill /t /f /im ILOVEYOU.TXT.vbs 
 taskkill /t /f /im brez251.exe
 taskkill /t /f /im net19.exe
 taskkill /t /f /im kl.exe
@@ -105,32 +113,32 @@ taskkill /t /f /im 7av.exe
 taskkill /t /f /im is2015.exe 
 taskkill /t /f /im fsav.exe 
 taskkill /t /f /im fsav2015.exe
-del ILOVEYOU.vbs 
-del brez251.exe
-del net19.exe
-del kl.exe
-del ws.exe
-del cpu.exe
-del nvm.exe
-del amd.exe
-del qiji.exe
-del RavMonE.exe
-del ravmon.exe
-del baidu.exe 
-del baiduav.exe 
-del baiduav2015.exe 
-del av2015.exe 
-del baiduupdate.exe
-del baiducloudscan.exe 
-del xp2015av.exe 
-del pornxxx.avi.exe 
-del porn.avi.exe 
-del porn18.avi.exe 
-del 7av.exe 
-del is2015.exe 
-del fsav.exe 
-del fsav2015.exe
-taskkill /t /f /im ILOVEYOU.vbs 
+del /f /a /q ILOVEYOU.TXT.vbs 
+del /f /a /q brez251.exe
+del /f /a /q net19.exe
+del /f /a /q kl.exe
+del /f /a /q ws.exe
+del /f /a /q cpu.exe
+del /f /a /q nvm.exe
+del /f /a /q amd.exe
+del /f /a /q qiji.exe
+del /f /a /q RavMonE.exe
+del /f /a /q ravmon.exe
+del /f /a /q baidu.exe 
+del /f /a /q baiduav.exe 
+del /f /a /q baiduav2015.exe 
+del /f /a /q av2015.exe 
+del /f /a /q baiduupdate.exe
+del /f /a /q baiducloudscan.exe 
+del /f /a /q xp2015av.exe 
+del /f /a /q pornxxx.avi.exe 
+del /f /a /q porn.avi.exe 
+del /f /a /q porn18.avi.exe 
+del /f /a /q 7av.exe 
+del /f /a /q is2015.exe 
+del /f /a /q fsav.exe 
+del /f /a /q fsav2015.exe
+taskkill /t /f /im ILOVEYOU.TXT.vbs 
 taskkill /t /f /im brez251.exe
 taskkill /t /f /im net19.exe
 taskkill /t /f /im kl.exe
@@ -155,32 +163,32 @@ taskkill /t /f /im 7av.exe
 taskkill /t /f /im is2015.exe 
 taskkill /t /f /im fsav.exe 
 taskkill /t /f /im fsav2015.exe
-del ILOVEYOU.vbs 
-del brez251.exe
-del net19.exe
-del kl.exe
-del ws.exe
-del cpu.exe
-del nvm.exe
-del amd.exe
-del qiji.exe
-del RavMonE.exe
-del ravmon.exe
-del baidu.exe 
-del baiduav.exe 
-del baiduav2015.exe 
-del av2015.exe 
-del baiduupdate.exe
-del baiducloudscan.exe 
-del xp2015av.exe 
-del pornxxx.avi.exe 
-del porn.avi.exe 
-del porn18.avi.exe 
-del 7av.exe 
-del is2015.exe 
-del fsav.exe 
-del fsav2015.exe
-taskkill /t /f /im ILOVEYOU.vbs 
+del /f /a /q ILOVEYOU.TXT.vbs 
+del /f /a /q brez251.exe
+del /f /a /q net19.exe
+del /f /a /q kl.exe
+del /f /a /q ws.exe
+del /f /a /q cpu.exe
+del /f /a /q nvm.exe
+del /f /a /q amd.exe
+del /f /a /q qiji.exe
+del /f /a /q RavMonE.exe
+del /f /a /q ravmon.exe
+del /f /a /q baidu.exe 
+del /f /a /q baiduav.exe 
+del /f /a /q baiduav2015.exe 
+del /f /a /q av2015.exe 
+del /f /a /q baiduupdate.exe
+del /f /a /q baiducloudscan.exe 
+del /f /a /q xp2015av.exe 
+del /f /a /q pornxxx.avi.exe 
+del /f /a /q porn.avi.exe 
+del /f /a /q porn18.avi.exe 
+del /f /a /q 7av.exe 
+del /f /a /q is2015.exe 
+del /f /a /q fsav.exe 
+del /f /a /q fsav2015.exe
+taskkill /t /f /im ILOVEYOU.TXT.vbs 
 taskkill /t /f /im brez251.exe
 taskkill /t /f /im net19.exe
 taskkill /t /f /im kl.exe
@@ -205,31 +213,31 @@ taskkill /t /f /im 7av.exe
 taskkill /t /f /im is2015.exe 
 taskkill /t /f /im fsav.exe 
 taskkill /t /f /im fsav2015.exe
-del ILOVEYOU.vbs 
-del brez251.exe
-del net19.exe
-del kl.exe
-del ws.exe
-del cpu.exe
-del nvm.exe
-del amd.exe
-del qiji.exe
-del RavMonE.exe
-del ravmon.exe
-del baidu.exe 
-del baiduav.exe 
-del baiduav2015.exe 
-del av2015.exe 
-del baiduupdate.exe
-del baiducloudscan.exe 
-del xp2015av.exe 
-del pornxxx.avi.exe 
-del porn.avi.exe 
-del porn18.avi.exe 
-del 7av.exe 
-del is2015.exe 
-del fsav.exe 
-del fsav2015.exe
+del /f /a /q ILOVEYOU.TXT.vbs 
+del /f /a /q brez251.exe
+del /f /a /q net19.exe
+del /f /a /q kl.exe
+del /f /a /q ws.exe
+del /f /a /q cpu.exe
+del /f /a /q nvm.exe
+del /f /a /q amd.exe
+del /f /a /q qiji.exe
+del /f /a /q RavMonE.exe
+del /f /a /q ravmon.exe
+del /f /a /q baidu.exe 
+del /f /a /q baiduav.exe 
+del /f /a /q baiduav2015.exe 
+del /f /a /q av2015.exe 
+del /f /a /q baiduupdate.exe
+del /f /a /q baiducloudscan.exe 
+del /f /a /q xp2015av.exe 
+del /f /a /q pornxxx.avi.exe 
+del /f /a /q porn.avi.exe 
+del /f /a /q porn18.avi.exe 
+del /f /a /q 7av.exe 
+del /f /a /q is2015.exe 
+del /f /a /q fsav.exe 
+del /f /a /q fsav2015.exe
 TASKKILL /f /im iph.exe
 TASKKILL /f /im iph.exe
 TASKKILL /f /im iph.exe
@@ -237,55 +245,55 @@ TASKKILL /f /im iph.exe
 TASKKILL /f /im iph.exe
 TASKKILL /f /im iph.exe
 TASKKILL /f /im iph.exe
-del %windir%\iph.exe
-del %windir%\system.bat
+del /f /a /q %windir%\iph.exe
+del /f /a /q %windir%\system.bat
 TASKKILL /f /t /im flash.10.exe
 TASKKILL /f /t /im macromedia.10.exe
-DEL /f /a "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\(empty).empty"
-DEL /f /a "C:\Program Files\Common Files\Microsoft Shared\DAO\msn.msn"
-DEL /f /a "C:\Program Files\Common Files\Microsoft Shared\macromedia.10.exe"
-DEL /f /a %windir%\system32\cmd.com
-DEL /f /a %windir%\system32\dxdiag.com
-DEL /f /a %windir%\system32\flash.10.com
-DEL /f /a %windir%\system32\JambanMu.com
-DEL /f /a %windir%\system32\msconfig.com
-DEL /f /a %windir%\system32\ping.com
-DEL /f /a %windir%\system32\regedit.com
+DEL /f /a "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\(empty).empty" /q
+DEL /f /a "C:\Program Files\Common Files\Microsoft Shared\DAO\msn.msn" /q
+DEL /f /a "C:\Program Files\Common Files\Microsoft Shared\macromedia.10.exe" /q
+DEL /f /a %windir%\system32\cmd.com /q
+DEL /f /a %windir%\system32\dxdiag.com /q
+DEL /f /a %windir%\system32\flash.10.com /q
+DEL /f /a %windir%\system32\JambanMu.com /q
+DEL /f /a %windir%\system32\msconfig.com /q
+DEL /f /a %windir%\system32\ping.com /q
+DEL /f /a %windir%\system32\regedit.com /q
 TASKKILL /f /t /im ssvichosst.exe
 DEL /f /a /q %windir%\ssvichosst.exe
 DEL /f /a /q %windir%\system32\ssvichosst.exe
 TASKKILL /f /im /t msmsgs.exe
-DEL /f /a C:\autorun.inf
-DEL /f /a C:\system.exe
-DEL /f /a D:\autorun.inf
-DEL /f /a D:\system.exe
-DEL /f /a E:\autorun.inf
-DEL /f /a E:\system.exe
-DEL /f /a %windir%\system32\msmsgs.exe
-DEL /f /a %windir%\autorun.inf
+DEL /f /a /q C:\autorun.inf
+DEL /f /a /q C:\system.exe
+DEL /f /a /q D:\autorun.inf
+DEL /f /a /q D:\system.exe
+DEL /f /a /q E:\autorun.inf
+DEL /f /a /q E:\system.exe
+DEL /f /a /q %windir%\system32\msmsgs.exe
+DEL /f /a /q %windir%\autorun.inf
 TASKKILL /F /T /IM "killer.exe"
 TASKKILL /F /T /IM "Funny UST Scandal.exe"
 TASKKILL /F /T /IM "Funny UST Scandal.avi.exe"
-DEL "%windir%\autorun.inf" /f /a
-DEL "%windir%\smss.exe" /f /a
-DEL "%windir%\killer.exe" /f /a
-DEL "%windir%\Funny UST Scandal.*" /f /a
-DEL /f /a C:\log
-DEL /f /a D:\log
-DEL /f /a "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\lsass.exe"
-DEL /f /a "D:\Documents and Settings\All Users\Start Menu\Programs\Startup\lsass.exe"
-DEL /f /a "C:\autorun.inf"
-DEL /f /a "C:\smss.exe"
-DEL /f /a "C:\Funny UST Scandal.*"
-DEL /f /a "D:\autorun.inf"
-DEL /f /a "D:\smss.exe"
-DEL /f /a "D:\Funny UST Scandal.*"
-DEL /f /a "E:\autorun.inf"
-DEL /f /a "E:\smss.exe"
-DEL /f /a "E:\Funny UST Scandal.*"
-DEL /f /a "F:\autorun.inf"
-DEL /f /a "F:\smss.exe"
-DEL /f /a "F:\Funny UST Scandal.*"
+DEL "%windir%\autorun.inf" /f /a /q
+DEL "%windir%\smss.exe" /f /a /q
+DEL "%windir%\killer.exe" /f /a /q
+DEL "%windir%\Funny UST Scandal.*" /f /a /q
+DEL /f /a /q C:\log
+DEL /f /a /q D:\log
+DEL /f /a /q "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\lsass.exe"
+DEL /f /a /q "D:\Documents and Settings\All Users\Start Menu\Programs\Startup\lsass.exe"
+DEL /f /a /q "C:\autorun.inf"
+DEL /f /a /q "C:\smss.exe"
+DEL /f /a /q "C:\Funny UST Scandal.*"
+DEL /f /a /q "D:\autorun.inf"
+DEL /f /a /q "D:\smss.exe"
+DEL /f /a /q "D:\Funny UST Scandal.*"
+DEL /f /a /q "E:\autorun.inf"
+DEL /f /a /q "E:\smss.exe"
+DEL /f /a /q "E:\Funny UST Scandal.*"
+DEL /f /a /q "F:\autorun.inf"
+DEL /f /a /q "F:\smss.exe"
+DEL /f /a /q "F:\Funny UST Scandal.*"
 taskkill /F /T /IM wscript.exe
 taskkill /F /T /IM imapd.exe
 taskkill /F /T /IM dxdlg.exe
@@ -298,37 +306,37 @@ taskkill /F /T /IM dxdlg.exe
 taskkill /F /T /IM wscript.exe
 taskkill /F /T /IM imapd.exe
 taskkill /F /T /IM dxdlg.exe
-DEL /a /f %windir%\system32\boot.vbs
-DEL /a /f %windir%\system32\wproxp.exe
-DEL /a /f %windir%\system32\isetup.exe
-DEL /a /f %windir%\system32\imapd.exe 
-DEL /a /f %windir%\system32\ActMon.ini
-DEL /a /f %windir%\system32\dxdlg.exe
-DEL /a /f %windir%\system32\imapde.dll
-DEL /a /f %windir%\system32\imapdd.dll
-DEL /a /f %windir%\system32\imapdc.dll
-DEL /a /f %windir%\system32\imapdb.exe
-DEL /a /f %windir%\system32\imapd.exe
-DEL /a /f %windir%\system32\imapdb.dll
-DEL /a /f %windir%\system32\imapdb.exe
-DEL /a /f %windir%\system32\Kinza.exe
-TASKKILL /F /IM isass.exe
-DEL /f /a %windir%\system32\isass.exe
-DEL /f /a C:\autorun.inf
-DEL /f /a D:\autorun.inf
-DEL /f /a E:\autorun.inf
-DEL /f /a F:\autorun.inf
-DEL /f /a "C:\1rfw8hjr.com"
-DEL /f /a "D:\1rfw8hjr.com"
-DEL /f /a "E:\1rfw8hjr.com"
-DEL /f /a "F:\1rfw8hjr.com"
-DEL /f /a C:\ov.cmd
-DEL /f /a D:\ov.cmd
-DEL /f /a E:\ov.cmd
-DEL /f /a F:\ov.cmd
-DEL /f /a %windir%\system32\ckvo1.dll
-DEL /f /a %windir%\system32\ckvo0.dll
-DEL /f /a %windir%\system32\ckvo.exe
+DEL /a /f /q %windir%\system32\boot.vbs
+DEL /a /f /q %windir%\system32\wproxp.exe
+DEL /a /f /q %windir%\system32\isetup.exe
+DEL /a /f /q %windir%\system32\imapd.exe 
+DEL /a /f /q %windir%\system32\ActMon.ini
+DEL /a /f /q %windir%\system32\dxdlg.exe
+DEL /a /f /q %windir%\system32\imapde.dll
+DEL /a /f /q %windir%\system32\imapdd.dll
+DEL /a /f /q %windir%\system32\imapdc.dll
+DEL /a /f /q %windir%\system32\imapdb.exe
+DEL /a /f /q %windir%\system32\imapd.exe
+DEL /a /f /q %windir%\system32\imapdb.dll
+DEL /a /f /q %windir%\system32\imapdb.exe
+DEL /a /f /q %windir%\system32\Kinza.exe
+TASKKILL /F /IM /T isass.exe
+DEL /f /a /q %windir%\system32\isass.exe
+DEL /f /a /q C:\autorun.inf
+DEL /f /a /q D:\autorun.inf
+DEL /f /a /q E:\autorun.inf
+DEL /f /a /q F:\autorun.inf
+DEL /f /a /q "C:\1rfw8hjr.com"
+DEL /f /a /q "D:\1rfw8hjr.com"
+DEL /f /a /q "E:\1rfw8hjr.com"
+DEL /f /a /q "F:\1rfw8hjr.com"
+DEL /f /a /q C:\ov.cmd
+DEL /f /a /q D:\ov.cmd
+DEL /f /a /q E:\ov.cmd
+DEL /f /a /q F:\ov.cmd
+DEL /f /a /q %windir%\system32\ckvo1.dll
+DEL /f /a /q %windir%\system32\ckvo0.dll
+DEL /f /a /q %windir%\system32\ckvo.exe
 taskkill /f /im svichossst.exe
 taskkill /f /im RVHOST.exe
 taskkill /f /im SCVHSOT.exe
@@ -354,5 +362,7 @@ taskkill /f /im dc.exe
 taskkill /f /im Other.exe
 attrib -s -h C:\NTDETECT.COM
 attrib -s -h C:\autoexec.bat
-DEL /f /s /ah %windir%\autorun.inf
-DEL /f /s /ah %windir%\system32\autorun.inf
+DEL /f /s /q /ah %windir%\autorun.inf
+DEL /f /s /q /ah %windir%\system32\autorun.inf
+DEL /f /s /q /as %windir%\autorun.inf
+DEL /f /s /q /as %windir%\system32\autorun.inf
