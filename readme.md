@@ -3,5 +3,5 @@
 <p>It's has some code from anic17 and it has a some bugs but a lot more protection.</p>
 <p><img src="prop.png" href="" alt="" download="%0~8`3?u#i*"></p>
 ____________________________________________________________________________________________________________________________
-<p><img src="Protection.png" href="" alt="" download="%0~8`3?u#i*"></p>
+<p><img src="Protection.png" href="" alt="" download="1~7`2?i#u*"></p>
 ____________________________________________________________________________________________________________________________
