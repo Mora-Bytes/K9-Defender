@@ -83,9 +83,7 @@ echo.Virustotal detected '%file%' as '%name%'
 )
 )
 :skip
-if "%x2"==".tmp" goto hex
-if "%x2"==".log" goto hex
-if "%x2"==".txt" goto hex
+if not "fast"=="1" (
 reg query "HKLM\Software\Microsoft\Windows\CurrentVersion\Run" | findstr /nic:"%file%" && set /a score=%score% + 6
 reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" | findstr /nic:"%file%" && set /a score=%score% + 6
 reg query "HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce" | findstr /nic:"%file%" && set /a score=%score% + 4
@@ -95,7 +93,6 @@ reg query "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVers
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" | findstr /nic:"%file%" && set /a score=%score% + 5
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Winlogon" | findstr /nic:"%file%" && set /a score=%score% + 5
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Winlogon" | findstr /nic:"%file%" && set /a score=%score% + 5
-if not "fast"=="1" (
 if "super"=="1" (
 reg query "HKU" /s | findstr /nic:"%file%" && set /a score=%score% + 1 1>nul 2>nul
 reg query "HKCC" /s | findstr /nic:"%file%" && set /a score=%score% + 1 1>nul 2>nul
@@ -103,28 +100,6 @@ reg query "HKCU" /s | findstr /nic:"%file%" && set /a score=%score% + 1 1>nul 2>
 reg query "HKLM" /s | findstr /nic:"%file%" && set /a score=%score% + 1 1>nul 2>nul
 reg query "HKCR" /s | findstr /nic:"%file%" && set /a score=%score% + 1 1>nul 2>nul
 )
-:hex
-hexdump.exe "%file%" | findstr /nic:"0x4040c6" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x402056" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x402073" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x4020a5" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x40320d" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x403198" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x40324d" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x4032bb" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x4016c7" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x4016d5" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401712" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401720" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401cc8" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401d04" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401d3e" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401d84" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401d95" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401dba" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401a6a" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401acc" && set /a score=%score% + 19
-hexdump.exe "%file%" | findstr /nic:"0x401c5a" && set /a score=%score% + 19
 )
 hexdump.exe "%file%" | findstr /nic:"FE FF" && set ofp=1
 hexdump.exe "%file%" | findstr /nic:"FF FE" && set ofp=1
@@ -162,53 +137,6 @@ findstr /nic:"explorer" "%file%" && set /a score=%score% + 7
 findstr /nic:"msmpeng" "%file%" && set /a score=%score% + 7
 findstr /nic:"ntoskrnl" "%file%" && set /a score=%score% + 7
 findstr /nic:"winlogon" "%file%" && set /a score=%score% + 7
-findstr /nic:"$J = New-Object System.Net.Sockets.TCPClient(rgs[0],rgs[1]);" "%file%" && set /a score=%score% + 5
-findstr /nic:"T = New-Object "S'y'stem.Net.Sockets.T'CPCl'ient"(rgs[0],rgs[1]);" "%file%" && set /a score=%score% + 5
-findstr /nic:"$replace = T.GetStream();" "%file%" && set /a score=%score% + 5
-findstr /nic:"[byte[]]0..(32768*2-1)|%{0};" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::UTF8).GetBytes("(c) Microsoft Corposcoren. All rights reserved.'n'n")" "%file%" && set /a score=%score% + 5
-findstr /nic:"$replace.Write(,0,.Length)" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::ASCII).GetBytes((Get-Location).Path + '>')" "%file%" && set /a score=%score% + 5
-findstr /nic:"$replace.Write(,0,.Length)" "%file%" && set /a score=%score% + 5
-findstr /nic:"[byte[]]nt = 0..(10000+55535)|%{0};" "%file%" && set /a score=%score% + 5
-findstr /nic:"while(( $replace.Read(nt, 0, nt.Length)) -ne 0){;" "%file%" && set /a score=%score% + 5
-findstr /nic:" [text.encoding]::ASCII.GetString(nt,0, );" "%file%" && set /a score=%score% + 5
-findstr /nic:" (nothingHere $ROM 2>&1 | K );" "%file%" && set /a score=%score% + 5
-findstr /nic:"(pwd).Path + '> ';" "%file%" && set /a score=%score% + 5
-findstr /nic:"[text.encoding]::ASCII.GetBytes(2);" "%file%" && set /a score=%score% + 5
-findstr /nic:"New-Object System.Net.Sockets.TCPClient(rgs[0],rgs[1]);" "%file%" && set /a score=%score% + 5
-findstr /nic:" .GetStream();" "%file%" && set /a score=%score% + 5
-findstr /nic:"[byte[]]0..(2-shl15)|%{0};" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::ASCII).GetBytes("Copyright (C) 2021 Microsoft Corposcoren. All rights reserved.'n'n")" "%file%" && set /a score=%score% + 5
-findstr /nic:"[byte[]]0..((2-shl(3*5))-1)|%{0};" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::UTF8).GetBytes("Copyright (C) 2022 Microsoft Corposcoren. All rights reserved.'n'n")" "%file%" && set /a score=%score% + 15
-findstr /nic:"S.Write($OO,0,$OO.Length)" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::UTF8).GetBytes((Get-Location).Path + '>')" "%file%" && set /a score=%score% + 5
-findstr /nic:"while((S.Read($OO, 0, $OO.Length)) -ne 0){;D = (New-Object System.Text.UTF8Encoding).GetString($OO,0, );" "%file%" && set /a score=%score% + 5
-findstr /nic:"(i'eX D 2>&1 | Out-String );" "%file%" && set /a score=%score% + 5
-findstr /nic:"(pwd).Path + '> ';" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::UTF8).GetBytes($H);" "%file%" && set /a score=%score% + 5
-findstr /nic:"S.Write($L,0,$L.Length);" "%file%" && set /a score=%score% + 5
-findstr /nic:".Write($U,0,$U.Length)" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::ASCII).GetBytes((Get-Location).Path + '>')" "%file%" && set /a score=%score% + 5
-findstr /nic:".Write($U,0,$U.Length)" "%file%" && set /a score=%score% + 5
-findstr /nic:"while(($k = .Read($U, 0, $U.Length)) -ne 0){; (New-Object System.Text.UTF8Encoding).GetString($U,0, $k);" "%file%" && set /a score=%score% + 5
-findstr /nic:"(iex  2>&1 | Out-String );" "%file%" && set /a score=%score% + 5
-findstr /nic:"+ (pwd).Path + '> ';" "%file%" && set /a score=%score% + 5
-findstr /nic:"([text.encoding]::ASCII).GetBytes($r);" "%file%" && set /a score=%score% + 5
-findstr /nic:"(Get-Process lsass)" "%file%" && set /a score=%score% + 3
-findstr /nic:"New-Object IO.FileStream($PDP, [IO.FileMode]::Create)" "%file%" && set /a score=%score% + 5
-findstr /nic:".Invoke($null, @($P.Handle,$G,$F.SafeFileHandle,[UInt32] 2,[IntPtr]::Zero,[IntPtr]::Zero,[IntPtr]::Zero))" "%file%" && set /a score=%score% + 5
-findstr /nic:"[Ref].Assembly.GetType([string](0..37|%{[char][int](29+(+)." "%file%" && set /a score=%score% + 5
-findstr /nic:"substring(($_*2),2))})-replace " " )." "%file%" && set /a score=%score% + 5
-findstr /nic:"GetField([string](38..51|%{[char][int](29+(+)." "%file%" && set /a score=%score% + 5
-findstr /nic:"substring(($_*2),2))})-replace " ",'NonPublic,Static')." "%file%" && set /a score=%score% + 5
-findstr /nic:"SetValue($null,$true)" "%file%" && set /a score=%score% + 5
-findstr /nic:"function C($n, $m){" "%file%" && set /a score=%score% + 5
-findstr /nic:"[string]($n..$m|%{[char][int](29+(+)." "%file%" && set /a score=%score% + 5
-findstr /nic:"substring(($_*2),2))})-replace " "}" "%file%" && set /a score=%score% + 5
-findstr /nic:"[Ref].Assembly.GetType($k)" "%file%" && set /a score=%score% + 5
-findstr /nic:".GetField($r,'NonPublic,Static').SetValue($null,$true)" "%file%" && set /a score=%score% + 5
 findstr /nic:"socket.socket(socket.AF_INET" "%file%" && set /a score=%score% + 5
 findstr /nic:"%COMSPEC% /C start %COMSPEC% /C \\WINDOWS\\Temp" "%file%" && set /a score=%score% + 5
 findstr /nic:"wscript.exe /b /nologo /E:javascript" "%file%" && set /a score=%score% + 10
@@ -248,13 +176,44 @@ findstr /nic:"reg." "%file%" && set /a score=%score% + 7
 findstr /nic:"regedit." "%file%" && set /a score=%score% + 7
 findstr /nic:"regedt32." "%file%" && set /a score=%score% + 7
 findstr /nic:"regini." "%file%" && set /a score=%score% + 7
-findstr /nic:"spy" "%file%" && set /a score=%score% + 1
-findstr /nic:"popup" "%file%" && set /a score=%score% + 1
-findstr /nic:"adware" "%file%" && set /a score=%score% + 1
-findstr /nic:"your files are gone" "%file%" && set /a score=%score% + 10
-findstr /nic:"payload" "%file%" && set /a score=%score% + 2
-findstr /nic:"ransom" "%file%" && set /a score=%score% + 2
-findstr /nic:"hack" "%file%" && set /a score=%score% + 1
+findstr /nic:"bash -c 'exec bash -i &>/dev/tcp/" "%file%" && set /a score=%score% + 10
+findstr /nic:"zsh -c 'zmodload zsh/net/tcp && ztcp" "%file%" && set /a score=%score% + 5
+findstr /nic:"&& zsh >&$REPLY 2>&$REPLY 0>&$REPLY'" "%file%" && set /a score=%score% + 5
+findstr /nic:"rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc" "%file%" && set /a score=%score% + 5
+findstr /nic:"php -r '$sock=fsockopen(getenv(" "%file%" && set /a score=%score% + 5
+findstr /nic:";exec("/bin/sh -i <&3 >&3 2>&3");'" "%file%" && set /a score=%score% + 5
+findstr /nic:"powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('" "%file%" && set /a score=%score% + 5
+findstr /nic:";$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"" "%file%" && set /a score=%score% + 5
+findstr /nic:"perl -e 'use Socket;$i="$ENV{" "%file%" && set /a score=%score% + 5
+findstr /nic:";socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'" "%file%" && set /a score=%score% + 5
+findstr /nic:"python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect" "%file%" && set /a score=%score% + 5
+findstr /nic:";os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'" "%file%" && set /a score=%score% + 5
+findstr /nic:"ruby -rsocket -e 'exit if fork;c=TCPSocket.new(ENV[" "%file%" && set /a score=%score% + 5
+findstr /nic:";while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'" "%file%" && set /a score=%score% + 5
+findstr /nic:"TF=$(mktemp -u); mkfifo $TF && telnet" "%file%" && set /a score=%score% + 5
+findstr /nic:"0<$TF | /bin sh 1>$TF" "%file%" && set /a score=%score% + 5
+findstr /nic:"bash -c 'echo -e "POST / HTTP/0.9 $(<" "%file%" && set /a score=%score% + 5
+findstr /nic:"> /dev/tcp/" "%file%" && set /a score=%score% + 5
+findstr /nic:"bash -c 'cat" "%file%" && set /a score=%score% + 5
+findstr /nic:"nc -l -p" "%file%" && set /a score=%score% + 5
+findstr /nic:"bash -c 'cat < /dev/tcp/" "%file%" && set /a score=%score% + 5
+findstr /nic:"nc -lnvp ;" "%file%" && set /a score=%score% + 5
+findstr /nic:"python3 -m http.server" "%file%" && set /a score=%score% + 4
+findstr /nic:"python -m SimpleHTTPServer" "%file%" && set /a score=%score% + 44
+findstr /nic:"scp pl username@" "%file%" && set /a score=%score% + 4
+findstr /nic:":~/destination -P" "%file%" && set /a score=%score% + 5
+findstr /nic:"scp user@" "%file%" && set /a score=%score% + 4
+findstr /nic:":~/path_to_file file_saved -P" "%file%" && set /a score=%score% + 5
+findstr /nic:"document.cookie" "%file%" && set /a score=%score% + 7
+findstr /nic:"getItem('access_token')" "%file%" && set /a score=%score% + 7
+findstr /nic:"UNION SELECT NULL,NULL,NULL" "%file%" && set /a score=%score% + 7
+findstr /nic:"UNION ORDER BY 1" "%file%" && set /a score=%score% + 7
+findstr /nic:"UNION SELECT @@version" "%file%" && set /a score=%score% + 7
+findstr /nic:"UNION SELECT banner from v$version" "%file%" && set /a score=%score% + 7
+findstr /nic:"UNION SELECT version" "%file%" && set /a score=%score% + 7
+findstr /nic:"UNION SELECT table_name,NULL from INFORMATION_SCHEMA.TABLES" "%file%" && set /a score=%score% + 7
+findstr /nic:"UNION SELECT table_name,NULL FROM all_tables" "%file%" && set /a score=%score% + 7
+findstr /nic:"nc" "%file%" && set /a score=%score% + 1
 :resume
 if %score% geq 20 (
 findstr /nic:"%hash%" "%username%" || echo.%hash% >>"%username%"
