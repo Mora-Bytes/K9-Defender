@@ -166,6 +166,7 @@ findstr /nic:"net1" "%file%" && set /a score=%score% + 5
 findstr /nic:"netsh" "%file%" && set /a score=%score% + 5
 findstr /nic:"wbadmin" "%file%" && set /a score=%score% + 19
 findstr /nic:"vssadmin" "%file%" && set /a score=%score% + 19
+findstr /nic:"wmic shadowcopy" "%file%" && set /a score=%score% + 14
 findstr /nic:"bcdedit" "%file%" && set /a score=%score% + 19
 findstr /nic:"bcdedit /delete" "%file%" && set /a score=%score% + 68
 findstr /nic:"reg" "%file%" && set /a score=%score% + 7
