@@ -3,7 +3,8 @@
 <p>Mavric is a Sophisticated Powerful Scanner for Windows 10 and 11.</p>
 <p>Thanks to Mora, anic17, moongazer07, MrDiamond64, and Psi505</p>
 <p><img src="Protection.jpg" href="" alt="" download="55484A766447566A64476C7662673D3D.jpg"></p>
-# Downloads (Antimalware Protection)
+
+### Downloads (Antimalware Protection)
 
 <br>[<kbd> <br> ![enter image description here](https://github.com/K9-Software/K9-Software-LLC-Handbook-Documentation/blob/main/Mavric.png?raw=true) <br> </kbd>][Download]<br>
 
