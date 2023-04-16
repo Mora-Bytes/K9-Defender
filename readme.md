@@ -1,3 +1,4 @@
+# This Project was moved to [https://codeberg.org/](https://codeberg.org/K9-Software/Mavric-Antimalware-Protection) and [https://bitbucket.org/](https://bitbucket.org/k9-software1/mavric/)
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
 <p>Mavric is a Sophisticated Powerful Scanner for Windows 10 and 11.</p>
 <p>Thanks to Mora</p>
