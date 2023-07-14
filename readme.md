@@ -1,9 +1,9 @@
-# K9-Defender
+# K9-Defender for Windows 10 and 11
 
 It is highly Simple and Powerful with:
-
-1. A built in Sophisticated Watchdog System and Process Scanning both for Windows 10 and 11
-2. Single file scanning(Scans a single file)
-3. Quick scanning(Scans places where malware is commonly found)
-4. System scanning(Scans C:)
-5. Root scanning(Scans all connected drives.)
+1. a Sophisticated Watchdog System
+2. a Powerful Process Scanning
+3. Single file scanning(Scans a single file)
+4. Quick scanning(Scans places where malware is commonly found)
+5. System scanning(Scans C:)
+6. Root scanning(Scans all connected drives.)
