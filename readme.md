@@ -1,11 +1,8 @@
-# This Project was moved to [https://codeberg.org/](https://codeberg.org/K9-Software/Mavric-Antimalware-Protection) and [https://bitbucket.org/](https://bitbucket.org/k9-software1/mavric/)
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
-<p>Mavric is a Sophisticated Powerful Scanner for Windows 10 and 11.</p>
-<p>Thanks to Mora</p>
-<p><img src="Protection.jpg" href="" alt="" download="55484A766447566A64476C7662673D3D.jpg"></p>
+# K9-Defender
 
-### Downloads (Antimalware Protection)
-
-<br>[<kbd> <br> ![enter image description here](https://github.com/K9-Software/K9-Software-LLC-Handbook-Documentation/blob/main/Mavric.png?raw=true) <br> </kbd>][Download]<br>
-
-[Download]: https://github.com/K9-Software/Mavric/releases/download/major/MavricV1.0.0-DemoSetup.exe
+It is highly Simple and Powerful with:
+A built in Sophisticated Watchdog System and Process Scanning both for Windows 10 and 11
+Single file scanning(Scans a single file)
+Quick scanning(Scans places where malware is commonly found)
+System scanning(Scans C:)
+Root scanning(Scans all connected drives.)
