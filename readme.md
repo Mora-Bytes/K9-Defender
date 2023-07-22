@@ -7,3 +7,5 @@ It is highly Simple and Powerful with:
 4. Quick scanning(Scans places where malware is commonly found)
 5. System scanning(Scans C:)
 6. Root scanning(Scans all connected drives.)
+
+Get raw downloads at 'https://bit.ly/Max222526'.
